@@ -4,7 +4,9 @@ import android.app.Application
 
 class SmartPhoneApplication: Application() {
     lateinit var smartPhoneComponent: SmartPhoneComponent
+
     override fun onCreate() {
+        smartPhoneComponent = initDagger()
         super.onCreate()
     }
 
@@ -12,4 +14,7 @@ class SmartPhoneApplication: Application() {
         DaggerSmartPhoneComponent.builder()
             .memoryCardModule(MemoryCardModule(1000))
             .build()
+
+
+
 }
