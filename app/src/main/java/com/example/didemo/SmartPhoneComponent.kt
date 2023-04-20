@@ -5,5 +5,6 @@ import dagger.Component
 
 @Component(modules = [MemoryCardModule::class,NCBatteryModule::class])
 interface SmartPhoneComponent {
-    fun getSmartphone() : SmartPhone
+
+    fun inject(mainActivity: MainActivity)
 }
