@@ -3,7 +3,7 @@ package com.example.didemo
 import dagger.Component
 
 
-@Component
+@Component(modules = [MemoryCardModule::class])
 interface SmartPhoneComponent {
     fun getSmartphone() : SmartPhone
 }
